@@ -33,6 +33,7 @@ body {
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
+    margin-bottom: 10px;
 }
 
 .btn-plain:hover {
