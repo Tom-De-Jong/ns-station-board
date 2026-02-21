@@ -7,7 +7,7 @@
 body {
     background-color: rgb(12, 12, 61);
     color: white;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: "Google Sans", sans-serif;
 }
 
 .container {
@@ -66,6 +66,6 @@ body {
 }
 
 .nextTrain{
-font-size: 70px;
+font-size: 60px;
 margin-left: 20px;
 }
