@@ -1,47 +1,71 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     background-color: rgb(12, 12, 61);
     color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.topBar{
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.topBar {
     height: 180px;
-    outline: green dotted 2px;
     width: 100%;
     display: flex;
     align-items: center;
 }
 
-.minuteNumber{
-font-size: 150px;
-margin: 25px;
-margin-right: 10px;
+.minuteNumber {
+    font-size: 150px;
+    margin: 25px;
+    margin-right: 10px;
 }
 
-.minuteText{
-font-size: 70px;
-align-self: flex-end;
-margin-left: 15px;
-margin-bottom: 25px;
+.minuteText {
+    font-size: 70px;
+    align-self: flex-end;
+    margin-left: 15px;
+    margin-bottom: 25px;
 }
 
-.trainType{
+.trainType {
     margin-right: 0px;
     margin-left: auto;
     font-size: 6vw;
 }
 
-.nsLogo{
+.nsLogo {
     height: 100%;
 }
 
-.destination{
-    font-size: 100px;
+.destination {
+    font-size: 180px;
     margin-left: 25px;
+}
+
+.via {
+    font-size: 80px;
+    margin-left: 25px;
+}
+
+.bottomBar {
+    background-color: rgba(255, 255, 255, 0.192);
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+}
+
+.nextTrain{
+font-size: 70px;
+margin-left: 20px;
 }
