@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(12, 12, 61);
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.topBar{
+    height: 180px;
+    outline: green dotted 2px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.minuteNumber{
+font-size: 150px;
+margin: 25px;
+margin-right: 10px;
+}
+
+.minuteText{
+font-size: 70px;
+align-self: flex-end;
+margin-left: 15px;
+margin-bottom: 25px;
+}
+
+.trainType{
+    margin-right: 0px;
+    margin-left: auto;
+    font-size: 6vw;
+}
+
+.nsLogo{
+    height: 100%;
+}
+
+.destination{
+    font-size: 100px;
+    margin-left: 25px;
+}
