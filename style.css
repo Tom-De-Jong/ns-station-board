@@ -10,7 +10,58 @@ body {
     font-family: "Google Sans", sans-serif;
 }
 
-.container {
+.startMenuContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.mainHeader {
+    font-size: 50px;
+    text-align: center;
+}
+
+.btn-plain {
+    background-color: #f5f5f5;
+    color: #001a33;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-plain:hover {
+    background-color: #ffffff;
+}
+
+.input-plain {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    padding: 10px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    font-family: sans-serif;
+    font-size: 14px;
+    outline: none;
+    width: 250px;
+    margin: 10px;
+}
+
+.input-plain:focus {
+    border-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.input-plain::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.boardContainer {
     display: flex;
     flex-direction: column;
 }
@@ -46,7 +97,7 @@ body {
 }
 
 .destination {
-    font-size: 180px;
+    font-size: 150px;
     margin-left: 25px;
 }
 
@@ -65,7 +116,7 @@ body {
     align-items: center;
 }
 
-.nextTrain{
-font-size: 60px;
-margin-left: 20px;
+.nextTrain {
+    font-size: 60px;
+    margin-left: 20px;
 }

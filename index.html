@@ -8,16 +8,24 @@
     <link rel="stylesheet" href="style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap"
+        rel="stylesheet">
 
 </head>
 
 <body>
 
-    <div class="container">
+    <div class="startMenuContainer" style="display: flex;">
+        <h1 class="mainHeader">Welkom bij ns bord!<br>Best bekeken op een desktop</h1>
 
+        <label for="">(UIC) Station code (Laat staan voor hoorn station): </label> <input class="input-plain"
+            type="text" value="8400337">
+        <button onclick="changeView()" class="btn-plain">Doorgaan!</button>
+    </div>
 
+    <div class="boardContainer" style="display: none;">
 
         <div class="topBar">
             <h1 class="minuteNumber"></h1>

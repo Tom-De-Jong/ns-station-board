@@ -5,11 +5,12 @@ let via = document.querySelector(".via");
 let nextTrain = document.querySelector(".nextTrain")
 let minuteText = document.querySelector(".minuteText")
 let trainNumber = 0;
+let uicCode;
 
 const fetchData = async () => {
 
 
-    fetch('https://gateway.apiportal.ns.nl/reisinformatie-api/api/v2/departures?uicCode=8400337&maxJourneys=10', {
+    fetch(`https://gateway.apiportal.ns.nl/reisinformatie-api/api/v2/departures?uicCode=${uicCode}&maxJourneys=2`, {
         method: 'GET',
         // Request headers
         headers: {
@@ -57,7 +58,14 @@ const fetchData = async () => {
                 for (let i = 0; i < data.payload.departures[trainNumber].routeStations.length; i++) {
 
                     if (i < data.payload.departures[trainNumber].routeStations.length - 1) {
-                        viaStations += " " + data.payload.departures[trainNumber].routeStations[i].mediumName + ","
+                        if (data.payload.departures[trainNumber].routeStations[i].mediumName.slice(-1) == ".") {
+
+                            viaStations += " " + data.payload.departures[trainNumber].routeStations[i].mediumName.slice(0, -1) + ",";
+
+                        } else {
+                            viaStations += " " + data.payload.departures[trainNumber].routeStations[i].mediumName + ","
+                        }
+
 
                     } else {
                         viaStations += " " + data.payload.departures[trainNumber].routeStations[i].mediumName
@@ -86,5 +94,14 @@ const fetchData = async () => {
 
 }
 
-fetchData();
-const interval = setInterval(fetchData, 60000);
+// fetchData();
+// const interval = setInterval(fetchData, 60000);
+
+function changeView() {
+    uicCode = document.querySelector(".input-plain").value
+    let startMenuContainer = document.querySelector(".startMenuContainer").style.display = "none";
+    document.querySelector(".boardContainer").style.display = "flex";
+
+    fetchData();
+    const interval = setInterval(fetchData, 60000);
+}
